@@ -9,11 +9,21 @@ namespace Business.Concrete
 {
     public class CarManager : ICarService
     {
+
         ICarDal _carDal;
 
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
+        }
+
+        public void Add(Car car,Brand brand)
+        {
+            if(brand.BrandName.Length >=2 && car.DailyPrice > 0)
+            {
+                _carDal.Add(car);
+            }
+            
         }
 
         public List<Car> GetAll()

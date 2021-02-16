@@ -13,11 +13,11 @@ namespace Entities.Concrete
 
         public int ColorId { get; set; }
 
-        public short ModelYear { get; set; }
+        public int ModelYear { get; set; }
 
-        public short DailyPrice { get; set; }
+        public decimal DailyPrice { get; set; }
 
-        public string Description { get; set; }
+        public string Descriptions { get; set; }
 
     }
 }
